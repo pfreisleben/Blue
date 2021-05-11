@@ -9,8 +9,6 @@ def soma(x, y):
     return var
 
 
-print(soma(10, 5))
-
 ###########################################################################
 # Função com valor padrão
 
@@ -19,5 +17,5 @@ def aumento_salarial(salario=5000, percentual=10):
     return salario*percentual/100 + salario
 
 
-salario_fulano = aumento_salarial(1000, 50)
-print(salario_fulano)
+def reducao_salarial(salario=5000, percentual=10):
+    return salario-salario*percentual/100
