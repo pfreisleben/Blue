@@ -15,4 +15,4 @@ def print_menor_igual(n1, n2):
         print(f'O número {n2} é o menor.')
 
 
-print_menor_igual(5, 4)
+print_menor_igual(5, 5)
