@@ -9,3 +9,12 @@
  50 - R$ 9.00
 
   """
+
+
+def tabelinha():
+    preco = float(input("Informe o preço do pão: ").replace(',', '.'))
+    for num in list(range(1, 51)):
+        print(f'{num} - R$ {num*preco:.2f}')
+
+
+tabelinha()
