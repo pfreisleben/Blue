@@ -3,8 +3,8 @@ palavraOculta = ""
 chances = 0
 for letra in range(len(palavra)):
     palavraOculta = palavraOculta + "_"
-for i in range(len(palavra+6)):
-    if i >= 6:
+for i in range(len(palavra)+6):
+    if i == 6:
         print("Você esgotou suas chances, cabô!")
         break
     else:
