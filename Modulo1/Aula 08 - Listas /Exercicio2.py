@@ -4,9 +4,13 @@ chances = 0
 for letra in range(len(palavra)):
     palavraOculta = palavraOculta + "_"
 for i in range(len(palavra)+6):
-    if i == 6:
+    if i == 7:
         print("Você não conseguiu completar a palvra.")
         print("Você esgotou suas chances, cabô!")
+        break
+    elif "_" not in palavraOculta:
+        print("Você conseguiu! Programa encerrado.")
+        print(f'Palavra: {palavraOculta}')
         break
     else:
         print(f'Você ainda tem {6-i} chances! ')

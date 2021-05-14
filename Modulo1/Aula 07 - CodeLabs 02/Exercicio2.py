@@ -7,6 +7,3 @@
 def soma_limite(n1, n2, lim):
     soma = n1 + n2
     return soma > lim
-
-
-print(soma_limite(1, 4, 6))
