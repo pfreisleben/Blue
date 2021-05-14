@@ -18,8 +18,7 @@ perguntas = ["Telefonou para vítima? S/N ",
 respostas = []
 
 for pergunta in perguntas:
-    resposta = input(pergunta)
-    resposta = resposta.lower()
+    resposta = input(pergunta).lower()
     if resposta == 's' or resposta == 'n':
         respostas.append(resposta)
     else:
