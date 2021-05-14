@@ -8,3 +8,12 @@
         e. lista em ordem crescente.
         f. lista em ordem decrescente.
 """
+lista = [5, 7, 2, 9, 4, 1, 3]
+print(f'Tamanho: {len(lista)}')
+print(f'Maior: {max(lista)}')
+print(f'Menor: {min(lista)}')
+print(f'Soma: {sum(lista)}')
+lista.sort()
+print(f'Ordem crescente: {lista}')
+lista.sort(reverse=True)
+print(f'Ordem decrescente: {lista}')
