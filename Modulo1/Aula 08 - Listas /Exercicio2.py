@@ -1,14 +1,9 @@
-"""
-Faça um jogo da forca. O programa terá uma lista de palavras lidas de um arquivo
- texto e escolherá uma aleatoriamente. O jogador poderá errar 6 vezes antes de 
- ser enforcado."""
-
 palavra = input("Informe a palavra: ").lower()
 palavraOculta = ""
 chances = 0
 for letra in range(len(palavra)):
     palavraOculta = palavraOculta + "_"
-for i in range(len(palavra)):
+for i in range(len(palavra+6)):
     if i >= 6:
         print("Você esgotou suas chances, cabô!")
         break
