@@ -10,12 +10,12 @@ maisAlto = 0
 maisBaixo = 0
 while conjuntos < 10:
     al = int(input("Digite a altura em centimetros: "))
-    if len(numero) == 0 and len(altura) == 0:
+    if conjuntos == 0:
         maisAlto = al
         maisBaixo = al
     altura.append(al)
     numero.append(len(numero) + 1)
-    conjuntos = conjuntos + 1
+    conjuntos += 1
     if al > maisAlto:
         maisAlto = al
     if al < maisBaixo:
@@ -24,6 +24,6 @@ indexAlto = altura.index(maisAlto)
 indexBaixo = altura.index(maisBaixo)
 
 print(
-    f'O aluno mais alto é: Número: {numero[indexAlto]} Altura: {altura[indexAlto]}')
+    f'O aluno mais alto é: Número: {numero[indexAlto]} Altura: {altura[indexAlto]}cm')
 print(
-    f'O aluno mais baixo é: Número: {numero[indexBaixo]} Altura: {altura[indexBaixo]}')
+    f'O aluno mais baixo é: Número: {numero[indexBaixo]} Altura: {altura[indexBaixo]}cm')
