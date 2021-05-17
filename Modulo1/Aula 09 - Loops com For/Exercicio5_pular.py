@@ -16,7 +16,7 @@ while True:  # Repetição sempre irá rodar, pois a condição será sempre Tru
     # Essa variável vai ser utilizada para checar se o programa deverá registrar novos itens ou não.
     registraItem = True
     while registraItem:  # Caso registraItem == True, rode:
-        produto = input("Informe o produto, ou digite 0 para terminar:")
+        produto = input("Informe o produto, ou digite 0 para terminar: ")
         if produto == "0":
             print(f'Encerrando registro dos itens...')
             # Faz a variavel registraItem ser False, para que não peça novos itens
@@ -28,6 +28,6 @@ while True:  # Repetição sempre irá rodar, pois a condição será sempre Tru
             lista1.append(produto)  # Insere o nome na lista.
             lista2.append(preco)  # Insere o preço na lista.
     # A função sum(list) faz a soma dos valores dentro da lista
-    print(f'Total da compra: {sum(lista2)}')
+    print(f'Total da compra: R${sum(lista2)}')
     dinheiro = float(input("Digite o valor pago pelo cliente: "))
-    print(f'O troco que deverá ser dado: {dinheiro - sum(lista2)}')
+    print(f'O troco que deverá ser dado: R${dinheiro - sum(lista2)}')
