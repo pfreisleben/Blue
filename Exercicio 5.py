@@ -20,5 +20,5 @@ def calcTrabalhador(nome, nascimento, ctps=0):
         trabalhador[nome] = {"Ano de nascimento": nascimento, "Idade": idade}
 
 
-calcTrabalhador("Pedro", 1997, 1041)
+calcTrabalhador("Pedro", 1997)
 print(trabalhador)
