@@ -15,10 +15,11 @@ def calcTrabalhador(nome, nascimento, ctps=0):
         anoAposentadoria = (anoContratacao + 35) - nascimento
         trabalhador[nome] = {"Ano de nascimento": nascimento,
                              "Idade": idade,
+                             "Salario": salario,
                              "Idade de aposentadoria": anoAposentadoria}
     else:
         trabalhador[nome] = {"Ano de nascimento": nascimento, "Idade": idade}
 
 
-calcTrabalhador("Pedro", 1997)
+calcTrabalhador("Pedro", 1997, 1)
 print(trabalhador)
