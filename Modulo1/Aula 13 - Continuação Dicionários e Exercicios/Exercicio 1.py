@@ -7,8 +7,10 @@ celebridades = {}
 while cadastra:
     nome = input("Digite o nome da celebridade: ").lower()
     nascimento = input("Informe a data de nascimento(dd/mm/aa): ")
-    continua = print(
-        f'Gostaria de cadastrar uma nova celebridade? S/N ').lower()
+    celebridades.update({nome: nascimento})
+    continua = input("Gostaria de cadastrar uma nova celebridade? S/N ")
     if continua == "n":
         cadastra = False
-escola = input("Agora, digite o nome da celebridade que deseja consultar: ")
+escolha = input(
+    "Agora, digite o nome da celebridade que deseja consultar: ").lower()
+print(celebridades.get(escolha, "Essa celebridade não está cadastrada"))
