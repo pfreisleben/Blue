@@ -16,6 +16,7 @@ def qtdGols(partidas):
 nome = input("Informe o nome do jogador: ")
 qtdPartidas = int(
     input("Informe a quantidade de partidas jogadas pelo jogador: "))
-aproveitamento.update({nome: qtdGols(qtdPartidas)})
+aproveitamento.update(
+    {nome: {"Qtd. Gols": qtdGols(qtdPartidas), "Qtd. Partidas": qtdPartidas}})
 
 print(aproveitamento)
