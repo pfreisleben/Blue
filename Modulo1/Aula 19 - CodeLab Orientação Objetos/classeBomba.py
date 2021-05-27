@@ -16,6 +16,7 @@ class bombaCombustivel:
         qtdLitros = valor / self.valorLitro
         self.quantidadeCombustivel -= qtdLitros
         self.abastecer(qtdLitros)
+        print(f'Total a pagar: R${valor:.2f}')
         return qtdLitros
 
     def abastecerPorLitro(self):
@@ -24,6 +25,7 @@ class bombaCombustivel:
         vlrAbastecimento = litro * self.valorLitro
         self.quantidadeCombustivel -= litro
         self.abastecer(litro)
+        print(f'Total a pagar: R$ {vlrAbastecimento:.2f}')
         return vlrAbastecimento
 
     def alterarValor(self):
@@ -43,6 +45,7 @@ class bombaCombustivel:
         litrosInteiro = int(litros)
         sobra = litros - litrosInteiro
         for i in range(1, int(litros)+1):
-            print(f'Abastecendo.... {i} litro.')
+            print(f'Abastecendo.... {i} {"litro" if i == 1 else "litros"}.')
             time.sleep(0.5)
-        print(f'Abastecendo... {sobra:.2f} litro.')
+        if sobra > 0:
+            print(f'Abastecendo... {sobra:.2f} litro.')
