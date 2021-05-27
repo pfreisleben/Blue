@@ -8,6 +8,9 @@ class bombaCombustivel:
         self.valorLitro = valorLitro
         self.quantidadeCombustivel = quantidadeCombustivel
 
+    def __str__(self):
+        return f'Tipo de combustivel atual: {self.tipoCombustivel}, valor atual: {self.valorLitro}, quantidade atual: {self.quantidadeCombustivel}'
+
     def abastecerPorValor(self, valor):
         qtdLitros = valor / self.valorLitro
         self.quantidadeCombustivel -= qtdLitros
