@@ -10,6 +10,7 @@ while True:
     print(f'3 - Alterar valor do litro do combustivel')
     print(f'4 - Alterar o tipo de combustivel')
     print(f'5 - Alterar quantidade disponivel de combustivel')
+    print(f'6 - Consultar valor por litro.')
     opcao = input("Digite sua opção: ")
     if opcao == '1':
         print(f'Combustiveis disponiveis: etanol, gasolina e diesel.')
@@ -68,6 +69,18 @@ while True:
             etanol.alterarQuantidadeCombustivel()
         elif escolha == "diesel":
             diesel.alterarQuantidadeCombustivel()
+        else:
+            print(f'Opção inválida.')
+            continue
+    elif opcao == '6':
+        print(f'Combustiveis disponiveis: etanol, gasolina e diesel.')
+        escolha = input("Digite o nome do tipo de combustivel escolhido: ")
+        if escolha == "gasolina":
+            print(gasolina.retornaValor())
+        elif escolha == "etanol":
+            print(etanol.retornaValor())
+        elif escolha == "diesel":
+            print(diesel.retornaValor())
         else:
             print(f'Opção inválida.')
             continue

@@ -49,3 +49,6 @@ class bombaCombustivel:
             time.sleep(0.5)
         if sobra > 0:
             print(f'Abastecendo... {sobra:.2f} litro.')
+
+    def retornaValor(self):
+        return self.valorLitro
