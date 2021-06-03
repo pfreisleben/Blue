@@ -15,6 +15,10 @@ class ingressoVip(ingresso):
         return self.valorReais + self.valorExtra
 
 
+ingresso = ingresso(10)
+
 ingressoVip = ingressoVip(10, 5)
 
-print(ingressoVip.retornaValor())
+
+print(
+    f'A diferença entre os ingressos é: {ingressoVip.retornaValor() - ingresso.imprimirValor()}')
