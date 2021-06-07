@@ -3,7 +3,10 @@ class contaBancaria():
         self.numero = numero
         self.agencia = agencia
         self.codigo_tipo = tipo
-        self.agenciasaldo = saldo
+        self.saldo = saldo
+
+    def __str__(self):
+        return f'Você tem R${self.saldo} de saldo!'
 
     def sacar(self, valor):
         if valor > self.saldo:
@@ -22,9 +25,20 @@ class contaBancaria():
 
 class contaImposto(contaBancaria):
     def __init__(self, numero, agencia, tipo, saldo, percentualImposto):
-        self.percentualImposto = percentualImposto
         super().__init__(numero, agencia, tipo, saldo)
+        self.percentualImposto = percentualImposto
 
     def calcularImposto(self):
         porcentagem = self.percentualImposto/100
         self.saldo -= self.saldo * porcentagem
+
+
+conta = contaImposto(10, 20, 1, 100, 5)
+print(conta.saldo)
+print(conta)
+conta.sacar(20)
+print(conta)
+conta.depositar(100)
+print(conta)
+conta.calcularImposto()
+print(conta)
