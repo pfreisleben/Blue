@@ -28,3 +28,25 @@ class elevador():
         else:
             print(f'Subindo um andar!')
             self.andar += 1
+
+    def descer(self):
+        if self.andar == 0:
+            print(f'O elevador já está no térreo!')
+        else:
+            print(f'Descendo um andar!')
+            self.andar -= 1
+
+
+elevador1 = elevador(10, 10)
+
+elevador1.subir()
+print(elevador1)
+elevador1.descer()
+print(elevador1)
+elevador1.entrar()
+print(elevador1)
+elevador1.subir()
+elevador1.subir()
+elevador1.sair()
+elevador1.sair()
+print(elevador1)
