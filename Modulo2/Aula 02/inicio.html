@@ -1,39 +1,111 @@
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <title>Módulo 2 - Aula 2 - T2C3</title>
-        <style>
-          * {
-            margin: 0;
-            padding: 0;
-          }
-          body {
-            background-color: gainsboro;
-          }
-          .div1 {
-            background-color: white;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            padding: 10px;
-          }
-          .bloco {
-            background-color: blue;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-          }
-        </style>
-      </head>
-      <body>
-        <div class="div1">
-          <img src="https://portal.thefutureisblue.me/pluginfile.php/1/theme_alpha/customlogotopbar/1622566472/logoblue.png" width="100px" alt="">
-          <h2 style="display: inline; color: blue;">Blue EdTech</h2>
-        </div>
-        <div class="bloco">
-          <div class="topo">
-            <h1 style="color: white;">Módulo 3 - Front-End</h1>
-          </div>
-        </div>
-      </body>
-    </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 3 - Front End</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .logo {
+      width: 100%;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+    }
+    .logo h1 {
+      color: blue;
+      margin-top: 10px;
+    }
+    .bloco {
+      width: 97%;
+      margin: auto;
+      height: auto;
+      background-color: blue;
+      border-radius: 15px;
+      padding: 10px;
+    }
+    .nome {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      color: white;
+      margin-bottom: 10px;
+    }
+    .conteudo {
+      display: flex;
+      flex-direction: row;
+    }
+    .conteudo1 {
+      margin: 5px;
+      background-color: yellow;
+      width: 50%;
+      height: auto;
+      border-radius: 10px;
+      padding: 10px;
+      padding-left: 20px
+    }
+ 
+    .conteudo2 {
+      margin: 5px;
+      background-color: rgb(255, 0, 170);
+      width: 50%;
+      height: auto;
+      border-radius: 10px;
+      padding: 10px;
+    }
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 5px;
+    }
+    th {
+      text-align: center;
+    }
+    td {
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+<div class="logo">
+  <img src="https://blueedtech.com.br/wp-content/themes/blue/dist/images/logo-blue-croped.gif" alt="" width="150px" height="50px">
+  <h1>Blue EdTech</h1>
+</div>
+<div class="bloco">
+  <div class="nome">
+    <h3>Módulo 2 - Web, Cloud e Database</h3>
+  </div>
+  <div class="conteudo">
+    <div class="conteudo1">
+      <h4>Agenda de hoje</h4>
+      <ul>
+        <li>Introdução ao desenvolvimento web</li>
+        <li>Estrutura HTML</li>
+        <li>Layout de páginas com CSS</li>
+      </ul>
+    </div>
+    <div class="conteudo2">
+      <h4>Lista de presença</h4>
+      <table style="width: 100%;">
+        <tr>       
+           <th style="width: 80%;">Aluno</th>
+           <th>Presente?</th>
+        </tr>
+        <tr>
+          <td style="width: 80%">Felipe Moraes</td>
+          <td>Sim</td>
+        </tr>
+
+      </table>
+    </div>
+  </div>
+</div>
+</body>
+</html>
