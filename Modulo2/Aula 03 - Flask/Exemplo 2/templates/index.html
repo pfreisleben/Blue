@@ -81,5 +81,9 @@
 </div>
 <br><br>
 <p>Olá {{nome}}, você tem {{idade}} anos, você é:  e vem de {{cidade}}</p>
-  
+{%if maiordeidade%}
+<p>VOCÊ É MAIOR DE IDADE</p>
+{% else %}
+<p>VOCÊ É MENOR DE IDADE</p>
+{% endif %}
 </body>
