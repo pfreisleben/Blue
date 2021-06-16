@@ -11,7 +11,6 @@ def index():
     imagem = None
 
     if request.method == 'POST':
-        print(request.form)
         nome = request.form['nome']
         sobrenome = request.form['sobrenome']
         criatura = request.form['criatura']
