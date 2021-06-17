@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../static/styles.css">
+
+</head>
+<body>
+  <div class="calculadora">
+    <div class="titulo"><h1>Calculadora de dano</h1></div>
+    <div class="selecione"><h2>Selecione um personagem</h2></div>
+    <div class="linha">
+      {% for personagem in personagens%}
+      <div class="card-personagem"  data-nome="{{personagem.nome}}" >
+        <img src="../static/{{personagem.nome}}.png" alt="">
+        <h3>{{personagem.nome}}</h3>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="selecione"><h2>Selecione uma arma</h2></div>
+    <div class="linha">
+      {% for arma in armas %}
+      <div class="card-arma" data-nome="{{arma.nome}}">
+        <img src="../static/{{arma.nome}}.png" alt="">
+        <h3>{{arma.nome}}</h3>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="linha"><button>Calcular dano!</button></div>
+
+  </div>
+  <script src="../static/scripts.js"></script>
+</body>
+</html>
