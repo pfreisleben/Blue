@@ -5,7 +5,7 @@
 
 .calculadora {
   background-color: rgb(230, 230, 230);
-  width: 60%;
+  width: 80%;
   margin: auto;
   border-radius: 20px;
   padding: 20px;
@@ -40,6 +40,7 @@
   text-align: center;
   align-items: center;
   border-radius: 20px;
+  margin-right: 10px;
   
 }
  img {
@@ -62,4 +63,5 @@ button {
 
 .selecionado {
   background-color: rgb(197, 207, 243);
+  border: 1px solid red;
 }
