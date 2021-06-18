@@ -11,7 +11,7 @@ const danoPorArma = {
   espada: 10,
 };
 
-function seleciona() {
+function marcarSelecionado() {
   if (!this.classList.contains('selecionado')) {
     if (this.classList.contains('card-personagem')) {
       for (let personagem of cardPersonagens) {
@@ -37,10 +37,10 @@ function calcularDano() {
 }
 
 for (let personagem of cardPersonagens) {
-  personagem.addEventListener('click', seleciona);
+  personagem.addEventListener('click', marcarSelecionado);
 }
 for (let arma of cardArmas) {
-  arma.addEventListener('click', seleciona);
+  arma.addEventListener('click', marcarSelecionado);
 }
 
 document.getElementById('calcular').addEventListener('click', calcularDano);
