@@ -31,9 +31,21 @@ function calcularDano() {
   let personagemSelecionado = document
     .getElementsByClassName('card-personagem selecionado')[0]
     .getAttribute('data-nome');
+
   let armaSelecionada = document
     .getElementsByClassName('card-arma selecionado')[0]
     .getAttribute('data-nome');
+  vida = vidaPorPersonagem[personagemSelecionado];
+  dano = danoPorArma[armaSelecionada];
+  function atacar(vida, dano) {
+    let resultado =
+      dano >= vida ? 'Você matou o personagem.' : 'Você não matou o personagem';
+    return resultado;
+  }
+  document.getElementById(
+    'resultado'
+  ).innerHTML = `<h3>Você usou ${armaSelecionada} para atacar ${personagemSelecionado}</h3>
+       <h2>${atacar(vida, dano)}</h2>`;
 }
 
 for (let personagem of cardPersonagens) {
