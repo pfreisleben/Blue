@@ -1,0 +1,1 @@
+select f.nome as Nome, f.sobrenome as Sobrenome, f.email as Email from funcionarios f
