@@ -1,0 +1,20 @@
+# Estruturar banco de dados
+1 - Criar tabela filmes(id, nome, imagem_url):
+1.1 - create table filmes (
+	id serial primary key,
+	nome varchar(255) not null,
+	imagem_url varchar(255) not null
+)
+2 - Inserir dados na tabela
+2.2 - insert into filmes(nome, imagem_url) 
+values ('A procura da felicidade', 
+'https://coisasdetv.com/wp-content/uploads/critica-de-hector-e-o-segredo-da-felicidade-um-pouco-branda.jpg%27'),
+('Matrix', 'https://br.web.img2.acsta.net/medias/nmedia/18/91/08/82/20128877.JPG'),
+('Harry Potter Pedra Filosofal', 'https://br.web.img3.acsta.net/medias/nmedia/18/95/59/60/20417256.jpg')
+
+# Estruturar projeto
+3 - Criar estrutura de projeto Flask (app.py, static e templates)
+
+4 - Importar as bibliotecas usadas no app.py
+4.1 - from flask import Flask, render_template
+from flask_sqlalchemy import SQLAlchemy
