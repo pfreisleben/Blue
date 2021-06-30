@@ -17,6 +17,8 @@ app.secret_key = "uma chave secreta bem secreta"
 db = SQLAlchemy(app)
 
 # Modelar a Classe Filmes -> tabela filmes
+
+
 class Filmes(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     nome = db.Column(db.String(255), nullable=False)
@@ -25,7 +27,7 @@ class Filmes(db.Model):
     def __init__(self, nome, imagem_url):
         self.nome = nome
         self.imagem_url = imagem_url
-    
+
     @staticmethod
     def read_all():
         # SELECT * FROM filmes ORDER BY id ASC

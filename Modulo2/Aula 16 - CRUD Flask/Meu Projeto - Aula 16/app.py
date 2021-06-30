@@ -41,8 +41,11 @@ def read():
     return render_template('filmes.html', filmes=filmes)
 
 
-@app.route('/read/<id>')
-def filme():
-    filme = Filmes.read
+@app.route('/read/<id_registro>')
+def filme(id_registro):
+    filme = Filmes.query.filter_by(id=id_registro).first()
+    return render_template('filme.html', filme=filme)
+
+
 if __name__ == '__main__':
     app.run(debug=True)
