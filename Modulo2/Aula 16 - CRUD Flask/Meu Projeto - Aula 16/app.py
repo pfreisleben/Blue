@@ -15,6 +15,8 @@ app.secret_key = "chaveOK"
 # Cria o objeto SQL Alchemy, passando o app como parametro e vinculando a variavel db.
 db = SQLAlchemy(app)
 
+# Modelar em uma classe, a tabela do banco.
+
 
 class Filmes(db.Model):
     id = db.Column(db.Integer, primary_key=True)
