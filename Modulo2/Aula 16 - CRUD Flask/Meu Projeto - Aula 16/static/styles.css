@@ -1,1 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap'); 
+
+body {
+  background: #eeeeee;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 20px 0;
+}
+
+.header {
+  padding-top: 20px;
+  background-color: white;
+}
+
+.bloco {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.botao{
+  background-color: #3359ec;
+  border-radius: 10px;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.796);
+}
+.botao:hover{
+  background-color: #5673ee;
+  transition: 0.25s;
+}
+.tabela{
+  border: 1px solid #adadad;
+  border-spacing: 0;
+  margin: 0 50px 20px;
+  width: 100%;
+}
+.tabela img {
+  width: 100px;
+  height: 120px;
+}
+.tabela tr:nth-child(even) td{
+  background-color: white;
+}
+
+.tabela td{
+  padding: 10px;
+}
+
+.tabela_header td{
+  font-weight: bold;
+}

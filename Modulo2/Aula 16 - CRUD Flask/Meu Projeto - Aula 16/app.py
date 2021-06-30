@@ -33,3 +33,13 @@ class Filmes(db.Model):
 @app.route('/')
 def index():
     return render_template('index.html')
+
+
+@app.route('/read')
+def read():
+    filmes = Filmes.read_all()
+    return render_template('filmes.html', filmes=filmes)
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
