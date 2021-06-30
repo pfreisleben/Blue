@@ -10,7 +10,7 @@ password = 'EYsro5jAqVKp9hnoUgX_G8Tw3IjMd9Jo'  # Senha do banco
 
 app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://{user}:{password}@{host}/{database}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.secret_key = "uma chave secreta bem secreta"
+app.secret_key = "chaveOK"
 
 # Cria o objeto SQL Alchemy, passando o app como parametro e vinculando a variavel db.
 db = SQLAlchemy(app)
@@ -41,5 +41,8 @@ def read():
     return render_template('filmes.html', filmes=filmes)
 
 
+@app.route('/read/<id>')
+def filme():
+    filme = Filmes.read
 if __name__ == '__main__':
     app.run(debug=True)
