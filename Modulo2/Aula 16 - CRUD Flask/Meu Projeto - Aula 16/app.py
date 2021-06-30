@@ -31,6 +31,10 @@ class Filmes(db.Model):
     def read_all():
         return Filmes.query.all()
 
+    @staticmethod
+    def read_single(id_registro):
+        return Filmes.query.get(id_registro)
+
 
 @app.route('/')
 def index():
@@ -45,7 +49,7 @@ def read():
 
 @app.route('/read/<id_registro>')
 def filme(id_registro):
-    filme = Filmes.query.filter_by(id=id_registro).first()
+    filme = Filmes.read_single(id_registro)
     return render_template('filme.html', filme=filme)
 
 
