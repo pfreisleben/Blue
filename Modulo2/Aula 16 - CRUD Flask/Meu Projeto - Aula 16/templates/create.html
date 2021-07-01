@@ -11,8 +11,15 @@
 {% include 'header.html' %}
 <div class="bloco"><h2>Criar um novo registro</h2></div>
 {% if id_atribuido %}
-<div class="bloco"><h3>Registro criado com sucesso!</h3><br>
-<h3>O ID atribuido foi <span class="botao">{{id_atribuido}}</span></h3></div>
+<div class="bloco">
+  <h3>Registro criado com sucesso!</h3><br>
+</div>
+<div class="bloco">
+  <h3>O ID atribuido foi <span class="botao">{{id_atribuido}}</span></h3>
+</div>
+<div class="bloco">
+  <a href="/read/{{id_atribuido}}" class="botao">Visualizar este item</a>
+</div>
 
 {% else %}
 <div class="bloco">
