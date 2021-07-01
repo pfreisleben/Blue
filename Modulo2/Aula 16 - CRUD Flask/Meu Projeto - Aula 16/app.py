@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -35,6 +35,10 @@ class Filmes(db.Model):
     def read_single(id_registro):
         return Filmes.query.get(id_registro)
 
+    def save(self):
+        db.session.add(self)
+        db.session.commit()
+
 
 @app.route('/')
 def index():
@@ -51,6 +55,18 @@ def read():
 def filme(id_registro):
     filme = Filmes.read_single(id_registro)
     return render_template('filme.html', filme=filme)
+
+
+@app.route('/create', methods=('GET', 'POST'))
+def create():
+    id_atribuido = None
+    if request.method == 'POST':
+        form = request.form
+        print(form)
+        registro = Filmes(form['nome'], form['imagem_url'])
+        registro.save()
+        id_atribuido = registro.id
+    return render_template('create.html', id_atribuido=id_atribuido)
 
 
 if __name__ == '__main__':

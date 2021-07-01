@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastre um novo filme</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+{% include 'header.html' %}
+<div class="bloco"><h2>Criar um novo registro</h2></div>
+{% if id_atribuido %}
+<div class="bloco"><h3>Registro criado com sucesso!</h3><br>
+<h3>O ID atribuido foi <span class="botao">{{id_atribuido}}</span></h3></div>
+
+{% else %}
+<div class="bloco">
+  <form action="/create" method="post">
+    <label for="nome">Digite o nome do filme:</label>
+    <input type="text" name="nome" id="nome"><br>
+    
+    <label for="imagem_url">Informe a URL da imagem:</label>
+    <input type="text" name="imagem_url" id="imagem_url"><br><br>
+    <input type="submit" value="Cadastrar" class="botao">
+  </form>
+</div>
+
+{% endif %}
+  
+</body>
+</html>
