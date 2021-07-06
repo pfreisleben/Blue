@@ -39,6 +39,11 @@ class Filmes(db.Model):
         db.session.add(self)
         db.session.commit()
 
+    def update(self, novo_registro):
+        self.nome = novo_registro.nome
+        self.imagem_url = novo_registro.imagem_url
+        self.save()
+
 
 @app.route('/')
 def index():
@@ -67,6 +72,18 @@ def create():
         registro.save()
         id_atribuido = registro.id
     return render_template('create.html', id_atribuido=id_atribuido)
+
+
+@app.route('/update/<registro_id>', methods=('GET', 'POST'))
+def update(registro_id):
+    sucesso = None
+    registro = Filmes.read_single(registro_id)
+    if request.method == 'POST':
+        form = request.form
+        novo_registro = Filmes(form['nome'], form['imagem_url'])
+        registro.update(novo_registro)
+        sucesso = True
+    return render_template('update.html', registro=registro, sucesso=sucesso)
 
 
 if __name__ == '__main__':

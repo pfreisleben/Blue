@@ -25,6 +25,14 @@ body {
   width: 100%;
 }
 
+.sucesso {
+  width: 100%;
+  background-color: aqua;
+  font-weight: bold;
+  color: rgb(4, 80, 4)
+  
+}
+
 
 .botao{
   background-color: #3359ec;

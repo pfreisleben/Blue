@@ -23,7 +23,8 @@
       <td>{{filme["id"]}}</td>
       <td>{{filme["nome"]}}</td>
       <td><img src="{{filme['imagem_url']}}" alt="" srcset="" width="100" height="120"></td>
-      <td><a href="/read/{{filme['id']}}" class="botao">Visualizar</a></td>
+      <td><a href="/read/{{filme['id']}}" class="botao">Visualizar</a>
+      <a href="/update/{{filme['id']}}" class="botao">Editar</a></td>
       </tr>
       {% endfor %}
     </table>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete um registro</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+{% include 'header.html' %}
+<div class="bloco"><h2>Remover registro</h2></div>
+{% if sucesso %}
+<div class="bloco sucesso">
+  <h3>Registro deletado com sucesso!</h3><br>
+</div>
+<div class="bloco">
+  <a href="/read"><h3 class="botao">Visualizar todos os registro</h3></a>
+</div>
+
+{% else %}
+<div class="bloco">
+  <form action="/delete/{{registro['id']}}" method="POST">
+    <label for="nome">Di</label>
+    <input type="text" name="nome" id="nome" value="{{registro['nome']}}"><br>
+    
+    <label for="imagem_url">Informe a URL da imagem:</label>
+    <input type="text" name="imagem_url" id="imagem_url" value="{{registro['imagem_url']}}"><br><br>
+    <input type="submit" value="Enviar" class="botao">
+  </form>
+</div>
+
+{% endif %}
+  
+</body>
+</html>
